@@ -13,14 +13,20 @@
           label="password"
           clearable
         ></v-text-field>
-      </v-col>
       <br>
-        <v-col cols="4">
-          <v-btn depressed small type="test" color="#F4511E" dark>Sign in</v-btn><br><br>
-          <div>구글계정 추가</div><br>
-          <v-btn text depressed small color="#F4511E" @click="test">Forgot Password?</v-btn><br><br>
-          <div>don't have an account ?<v-btn text depressed small color="#F4511E" @click="test">Sign Up</v-btn></div>
-        </v-col>
+        <v-btn depressed color="#F4511E" width="360px" dark>Sign in</v-btn><br><br>
+        <v-card-text height="40px" width="320px" align="center">
+          <v-btn depressed small color="white">
+            <v-img
+              :src="require('/Users/jumibaek/Downloads/google.png')"
+              width="30px"
+            ></v-img>
+          </v-btn>
+        </v-card-text>
+        <br><br>
+        <v-btn text depressed small color="#F4511E" @click="test">Forgot Password?</v-btn><br><br>
+        <div>Don't have an account ?<v-btn text depressed small color="#F4511E" @click="test">Sign Up</v-btn></div>
+      </v-col>
     </v-container>
   </div>
 </template>
