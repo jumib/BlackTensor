@@ -1,14 +1,44 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import MainPage from '../views/MainPage.vue'
+import LoginPage from '../views/LoginPage.vue'
+import TradeWishPage from '../views/TradeWishPage.vue'
+import TradeTotalPage from '../views/TradeTotalPage.vue'
+import TradeDetailPage from '../views/TradeDetailPage.vue'
+import FindPw from '../views/FindPw.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'MainPage',
+    component: MainPage
+  },
+  {
+    path: '/LoginPage',
+    name: 'LoginPage',
+    component: LoginPage
+  },
+  {
+    path: '/TradeWishPage',
+    name: 'TradeWishPage',
+    component: TradeWishPage
+  },
+  {
+    path: '/TradeTotalPage',
+    name: 'TradeTotalPage',
+    component: TradeTotalPage
+  },
+  {
+    path: '/TradeDetailPage',
+    name: 'TradeDetailPage',
+    component: TradeDetailPage
+  },
+  {
+    path: '/FindPw',
+    name: 'FindPw',
+    component: FindPw
   }
 ]
 
