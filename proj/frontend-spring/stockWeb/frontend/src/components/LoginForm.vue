@@ -18,13 +18,13 @@
         <v-card-text height="40px" width="320px" align="center">
           <v-btn depressed small color="white">
             <v-img
-              :src="require('/Users/jumibaek/Downloads/google.png')"
+              :src="require('../assets/google.png')"
               width="30px"
             ></v-img>
           </v-btn>
         </v-card-text>
         <br><br>
-        <v-btn text depressed small color="#F4511E" @click="test">Forgot Password?</v-btn><br><br>
+        <v-btn text depressed small color="#F4511E" @click="findPw">Forgot Password?</v-btn><br><br>
         <div>Don't have an account ?<v-btn text depressed small color="#F4511E" @click="test">Sign Up</v-btn></div>
       </v-col>
     </v-container>
@@ -42,6 +42,9 @@ export default {
   },
   methods: {
     test () {
+    },
+    findPw () {
+      this.$router.push('FindPw')
     }
   }
 }

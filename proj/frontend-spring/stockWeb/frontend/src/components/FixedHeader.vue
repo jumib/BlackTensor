@@ -6,7 +6,7 @@
     >
       <v-toolbar-title>
         <v-btn depressed text @click="main" >
-          <v-img :src="require('/Users/jumibaek/Downloads/mainlogo.png')" height="26px" width="130px"></v-img>
+          <v-img :src="require('../assets/mainlogo.png')" height="26px" width="130px"></v-img>
         </v-btn>
       </v-toolbar-title>
 
@@ -27,7 +27,7 @@ export default {
       this.$router.push('LoginPage')
     },
     start () {
-      alert('start')
+      this.$router.push('TradeWishPage')
     }
   }
 }
