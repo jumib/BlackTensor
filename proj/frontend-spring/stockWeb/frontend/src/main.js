@@ -7,14 +7,11 @@ import BootstrapVue from 'bootstrap-vue'
 import Vuetify from 'vuetify'
 import JQuery from 'jquery'
 import VueSlideBar from 'vue-slide-bar'
-import VueSweetalert2 from 'vue-sweetalert2'
-import VueGoodWizard from 'vue-good-wizard'
+
 // eslint-disable-next-line
 let $ = JQuery
 
 Vue.use(BootstrapVue)
-Vue.use(VueSweetalert2)
-Vue.use(VueGoodWizard)
 Vue.use(Vuetify)
 
 Vue.component('vue-slide-bar', VueSlideBar)
