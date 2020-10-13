@@ -1,33 +1,19 @@
-<template>
-  <v-app>
-    <div id="header">
-      <FixedHeader/>
-    </div>
-    <div id="content" >
-      <router-view/>
-    </div>
-    <!-- <div id="footer">
-      <FixedFooter/>
-    </div> -->
-  </v-app>
+<template lang="html">
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
-<script>
-import FixedHeader from '@/components/FixedHeader'
-// import FixedFooter from '@/components/FixedFooter'
-
-export default {
-  name: 'App',
-  components: {
-    FixedHeader
-    // FixedFooter
-  }
-}
+<script lang="js">
 </script>
 
-<style scoped>
-#content {
-   /*background-color: #22293d;
-   height: 100%;*/
-}
+<style>
+@import "../node_modules/mdi/css/materialdesignicons.min.css";
+@import "../node_modules/flag-icon-css/css/flag-icon.min.css";
+@import "../node_modules/vue-snotify/styles/material.css";
+@import "../node_modules/typicons.font/src/font/typicons.css";
+</style>
+
+<style lang="scss">
+@import "assets/scss/shared/style";
 </style>
