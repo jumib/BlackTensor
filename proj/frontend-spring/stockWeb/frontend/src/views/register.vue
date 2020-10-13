@@ -25,14 +25,14 @@
                     </div><br>
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-dark submit-btn btn-block" @click="$router.push('/dashboard')">Login</button>
+                    <button class="btn btn-dark submit-btn btn-block" @click="$router.push('/totalpage/')">Login</button>
                   </div>
                   <div class="form-group d-flex justify-content-between">
                     <a href="#" class="text-small forgot-password text-black">Forgot Password</a>
                   </div>
                   <div class="form-group">
                     <button class="btn btn-block g-login">
-                      <img class="mr-3" src="../../../assets/images/file-icons/icon-google.svg" alt="">Log in with Google</button>
+                      <img class="mr-3">Log in with Google</button>
                   </div>
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Not a member ?</span>

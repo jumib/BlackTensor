@@ -54,10 +54,7 @@
           <b-collapse id="auth">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <router-link class="nav-link" to="/pages/login/">Login</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/pages/register/">Register</router-link>
+                <router-link class="nav-link" to="/register/">Register</router-link>
               </li>
             </ul>
           </b-collapse>

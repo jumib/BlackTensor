@@ -7,8 +7,8 @@ import totalpage from '../views/toatalpage'
 import detailpage from '../views/detailpage'
 import wishcart from '../views/wishcart'
 
-import login from '../views/samples/user-pages/login'
-import register from '../views/samples/user-pages/register'
+import login from '../views/login'
+import register from '../views/register'
 
 Vue.use(Router)
 
@@ -49,11 +49,11 @@ export default new Router({
     },
     children: [
       {
-        path: '/pages/login',
+        path: '/login',
         component: login
       },
       {
-        path: '/pages/register',
+        path: '/register',
         component: register
       }
     ]}

@@ -42,7 +42,7 @@
                   </div>
                   <div class="form-group">
                     <button class="btn btn-block g-login">
-                      <img class="mr-3" src="../../../assets/images/file-icons/icon-google.svg" alt="">Log in with Google</button>
+                      <img class="mr-3">Log in with Google</button>
                   </div>
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Not a member ?</span>
