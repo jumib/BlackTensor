@@ -9,6 +9,7 @@ import wishcart from '../views/wishcart'
 
 import login from '../views/login'
 import register from '../views/register'
+import mainpage from '../views/mainpage'
 
 Vue.use(Router)
 
@@ -18,10 +19,15 @@ export default new Router({
   mode: 'hash',
   routes: [{
     path: '/',
-    redirect: '/totalpage',
+    redirect: '/mainpage',
     component: mainView,
     children: [
       {
+        path: '/mainpage',
+        name: 'mainpage',
+        component: mainpage
+      },
+        {
         path: '/wishsearch',
         name: 'wishsearch',
         component: wishsearch
@@ -33,10 +39,12 @@ export default new Router({
       },
       {
         path: '/totalpage',
+        name: totalpage,
         component: totalpage
       },
       {
         path: '/detailpage',
+        name: detailpage,
         component: detailpage
       }
     ]

@@ -7,7 +7,6 @@
           <span class="nav-link" v-b-toggle="'charts-dropdown'">
             <i class="menu-icon typcn typcn-th-large-outline"></i>
             <span class="menu-title">Total View</span>
-            <i class="menu-arrow"></i>
           </span>
           <b-collapse id="charts-dropdown">
             <ul class="nav flex-column sub-menu">
@@ -21,7 +20,6 @@
           <a class="nav-link" v-b-toggle="'tables'">
             <i class="menu-icon mdi mdi-table"></i>
             <span class="menu-title">Detail View</span>
-            <i class="menu-arrow"></i>
           </a>
           <b-collapse id="tables">
             <ul class="nav flex-column sub-menu">
@@ -35,7 +33,6 @@
           <a class="nav-link" v-b-toggle="'dashboard-dropdown'">
             <i class="menu-icon typcn typcn-document-text"></i>
             <span class="menu-title">Wish List</span>
-            <i class="menu-arrow"></i>
           </a>
           <b-collapse id="dashboard-dropdown">
             <ul class="nav flex-column sub-menu">
@@ -48,16 +45,8 @@
         <li class="nav-item">
           <a class="nav-link" v-b-toggle="'auth'">
             <i class="menu-icon typcn typcn-document-add"></i>
-            <span class="menu-title">User Pages</span>
-            <i class="menu-arrow"></i>
+            <span class="menu-title">Etc.</span>
           </a>
-          <b-collapse id="auth">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-                <router-link class="nav-link" to="/register/">Register</router-link>
-              </li>
-            </ul>
-          </b-collapse>
         </li>
       </ul>
     </nav>

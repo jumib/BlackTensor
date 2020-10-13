@@ -25,7 +25,7 @@
                     </div><br>
                   </div>
                   <div class="form-group">
-                    <button class="btn btn-dark submit-btn btn-block" @click="$router.push('/totalpage/')">Login</button>
+                    <button class="btn btn-dark submit-btn btn-block" @click="$router.push('/mainpage/')">Login</button>
                   </div>
                   <div class="form-group d-flex justify-content-between">
                     <a href="#" class="text-small forgot-password text-black">Forgot Password</a>
