@@ -1,51 +1,69 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import MainPage from '../views/MainPage.vue'
-import LoginPage from '../views/LoginPage.vue'
-import TradeWishPage from '../views/TradeWishPage.vue'
-import TradeTotalPage from '../views/TradeTotalPage.vue'
-import TradeDetailPage from '../views/TradeDetailPage.vue'
-import FindPw from '../views/FindPw.vue'
+import Router from 'vue-router'
 
-Vue.use(VueRouter)
+import wishsearch from '../views/wishsearch'
+import mainView from '../mainView'
+import totalpage from '../views/toatalpage'
+import detailpage from '../views/detailpage'
+import wishcart from '../views/wishcart'
 
-const routes = [
-  {
+import login from '../views/login'
+import register from '../views/register'
+import mainpage from '../views/mainpage'
+
+Vue.use(Router)
+
+export default new Router({
+  linkActiveClass: 'active',
+  scrollBehavior: () => ({ y: 0 }),
+  mode: 'hash',
+  routes: [{
     path: '/',
-    name: 'MainPage',
-    component: MainPage
+    redirect: '/mainpage',
+    component: mainView,
+    children: [
+      {
+        path: '/mainpage',
+        name: 'mainpage',
+        component: mainpage
+      },
+        {
+        path: '/wishsearch',
+        name: 'wishsearch',
+        component: wishsearch
+      },
+      {
+        path: '/wishcart',
+        name: 'wishcart',
+        component: wishcart
+      },
+      {
+        path: '/totalpage',
+        name: totalpage,
+        component: totalpage
+      },
+      {
+        path: '/detailpage',
+        name: detailpage,
+        component: detailpage
+      }
+    ]
   },
   {
-    path: '/LoginPage',
-    name: 'LoginPage',
-    component: LoginPage
-  },
-  {
-    path: '/TradeWishPage',
-    name: 'TradeWishPage',
-    component: TradeWishPage
-  },
-  {
-    path: '/TradeTotalPage',
-    name: 'TradeTotalPage',
-    component: TradeTotalPage
-  },
-  {
-    path: '/TradeDetailPage',
-    name: 'TradeDetailPage',
-    component: TradeDetailPage
-  },
-  {
-    path: '/FindPw',
-    name: 'FindPw',
-    component: FindPw
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    path: '*',
+    redirect: '/pages/error_404',
+    component: {
+      render (c) { return c('router-view') }
+    },
+    children: [
+      {
+        path: '/login',
+        component: login
+      },
+      {
+        path: '/register',
+        component: register
+      }
+    ]}
+  ]
 })
-
-export default router
