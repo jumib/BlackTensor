@@ -13,7 +13,6 @@
         <span class="mdi mdi-menu"></span>
       </button>
       <b-navbar-nav class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-        <b-nav-item class="font-weight-semibold d-none d-lg-block" href="#">Help : +050 2992 709</b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="navbar-nav-right ml-auto">
         <form class="mr-auto search-form d-none d-md-block" action="#">
@@ -34,7 +33,7 @@
           </b-dropdown-item>
         </b-nav-item-dropdown>
         <div class="ml-3">
-          <b-button variant="dark" @click="$router.push('/register/')">sign in</b-button>
+          <b-button variant="dark" @click="$router.push('/login/')">sign in</b-button>
         </div>
         <b-nav-item-dropdown right class="preview-list user-dropdown">
           <template slot="button-content">
