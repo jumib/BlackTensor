@@ -16,6 +16,7 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.6",
     "@johmun/vue-tags-input": "^1.6.0",
+    "axios": "^0.20.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.20",
     "chart.js": "^2.8.0",
@@ -43,7 +44,8 @@
     "vue-sweetalert2": "^1.6.4",
     "vue2-ace-editor": "0.0.13",
     "vuejs-datepicker": "^1.5.4",
-    "vuetify": "^2.3.13"
+    "vuetify": "^2.3.13",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

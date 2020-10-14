@@ -33,27 +33,8 @@
           </b-dropdown-item>
         </b-nav-item-dropdown>
         <div class="ml-3">
-          <b-button variant="dark" @click="$router.push('/login/')">sign in</b-button>
+          <b-button variant="outline-dark" @click="$router.push('/login/')">로그인</b-button>
         </div>
-        <b-nav-item-dropdown right class="preview-list user-dropdown">
-          <template slot="button-content">
-            <div class="d-flex align-items-center">
-              <img class="img-xs rounded-circle" src="../../assets/images/faces/face8.jpg" alt="Profile image">
-            </div>
-          </template>
-          <b-dropdown-item>
-            <div class="dropdown-header text-center w-100">
-              <img class="img-md rounded-circle" src="../../assets/images/faces/face8.jpg" alt="Profile image">
-              <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-              <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
-            </div>
-          </b-dropdown-item>
-          <b-dropdown-item>My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></b-dropdown-item>
-          <b-dropdown-item>Messages<i class="dropdown-item-icon ti-comment-alt"></i></b-dropdown-item>
-          <b-dropdown-item>Activity<i class="dropdown-item-icon ti-location-arrow"></i></b-dropdown-item>
-          <b-dropdown-item>FAQ<i class="dropdown-item-icon ti-help-alt"></i></b-dropdown-item>
-          <b-dropdown-item>Sign Out<i class="dropdown-item-icon ti-power-off"></i></b-dropdown-item>
-        </b-nav-item-dropdown>
       </b-navbar-nav>
       <button class="navbar-toggler navbar-toggler-right align-self-center" type="button" @click="collapedMobileSidebar()">
         <span class="mdi mdi-menu"></span>

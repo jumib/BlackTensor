@@ -13,9 +13,9 @@ import mainpage from '../views/mainpage'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   linkActiveClass: 'active',
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({y: 0}),
   mode: 'hash',
   routes: [{
     path: '/',
@@ -53,7 +53,9 @@ export default new Router({
     path: '*',
     redirect: '/pages/error_404',
     component: {
-      render (c) { return c('router-view') }
+      render (c) {
+        return c('router-view')
+      }
     },
     children: [
       {
@@ -64,6 +66,9 @@ export default new Router({
         path: '/register',
         component: register
       }
-    ]}
+    ]
+  }
   ]
 })
+
+export default router

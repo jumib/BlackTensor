@@ -3,6 +3,8 @@
 .card {
   border: none;
   background: #fff;
+  background-color: rgba( 255, 255, 255, 0.5 );
+
 
   .card-header {
     background: lighten($card-bg, 3%);
