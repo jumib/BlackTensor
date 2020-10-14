@@ -1,5 +1,4 @@
 <template lang="html">
-
   <section class="register">
     <div class="container-scroller">
       <div class="container-fluid page-body-wrapper full-page-wrapper">

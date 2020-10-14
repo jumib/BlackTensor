@@ -27,7 +27,7 @@ export default new Router({
         name: 'mainpage',
         component: mainpage
       },
-        {
+      {
         path: '/wishsearch',
         name: 'wishsearch',
         component: wishsearch
