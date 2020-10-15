@@ -45,7 +45,7 @@
         <li class="nav-item">
           <a class="nav-link" v-b-toggle="'auth'">
             <i class="menu-icon typcn typcn-document-add"></i>
-            <span class="menu-title">Etc.</span>
+            <router-link class="menu-title" to="/mypage/">My Page</router-link>
           </a>
         </li>
       </ul>

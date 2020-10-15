@@ -1,4 +1,5 @@
-<template>
+<template lang="html">
+  <section class="login">
   <div class="container-fluid page-body-wrapper full-page-wrapper">
     <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
       <div class="row w-100">
@@ -50,6 +51,7 @@
       </div>
     </div>
   </div>
+  </section>
 </template>
 
 <script lang="js">

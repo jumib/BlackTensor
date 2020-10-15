@@ -10,6 +10,7 @@ import wishcart from '../views/wishcart'
 import login from '../views/login'
 import register from '../views/register'
 import mainpage from '../views/mainpage'
+import mypage from '../views/mypage'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ const router = new Router({
         path: '/detailpage',
         name: detailpage,
         component: detailpage
+      },
+      {
+        path: '/mypage',
+        name: mypage,
+        component: mypage
       }
     ]
   },
