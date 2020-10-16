@@ -10,12 +10,13 @@ import wishcart from '../views/wishcart'
 import login from '../views/login'
 import register from '../views/register'
 import mainpage from '../views/mainpage'
+import mypage from '../views/mypage'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   linkActiveClass: 'active',
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({y: 0}),
   mode: 'hash',
   routes: [{
     path: '/',
@@ -46,6 +47,11 @@ export default new Router({
         path: '/detailpage',
         name: detailpage,
         component: detailpage
+      },
+      {
+        path: '/mypage',
+        name: mypage,
+        component: mypage
       }
     ]
   },
@@ -53,7 +59,9 @@ export default new Router({
     path: '*',
     redirect: '/pages/error_404',
     component: {
-      render (c) { return c('router-view') }
+      render (c) {
+        return c('router-view')
+      }
     },
     children: [
       {
@@ -64,6 +72,9 @@ export default new Router({
         path: '/register',
         component: register
       }
-    ]}
+    ]
+  }
   ]
 })
+
+export default router
