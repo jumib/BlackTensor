@@ -12,7 +12,7 @@
           </b-tabs>
           <div>
             <b-card-title>삼성전자</b-card-title>
-              <line-chart height="80"></line-chart>
+              <wishbarchart height="80"/>
               <wishsearchtable/>
               <b-form-checkbox
                 name="checkbox-1"
@@ -25,7 +25,7 @@
 </template>
 
 <script lang="js">
-import lineChart from '../components/charts/examples/lineChart'
+import wishbarchart from '../components/stockchart/wishbarchart'
 import wishsearchtable from '../components/stocktable/wishsearchtable'
 
 export default {
@@ -35,7 +35,7 @@ export default {
     }
   },
   components: {
-    lineChart,
+    wishbarchart,
     wishsearchtable
   }
 }

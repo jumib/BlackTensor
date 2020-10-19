@@ -16,7 +16,6 @@
     <div class="col-md-8 grid-margin stretch-card">
       <div class="card">
         <div class='card-body'>
-          <h4 class='card-title mb-0'>AM chart로 변경</h4><br>
           <div class='d-flex flex-column flex-lg-row'>
             <div class='data-wrapper d-flex mt-2 mt-lg-0'>
               <div class='wrapper pr-5'>
