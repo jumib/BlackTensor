@@ -1,0 +1,1 @@
+export const FETCH_TOTAL_TABLE = 'FETCH_TOTAL_TABLE'

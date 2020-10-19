@@ -12,33 +12,17 @@
       <button class="navbar-toggler navbar-toggler align-self-center" type="button" @click="collapedSidebar()">
         <span class="mdi mdi-menu"></span>
       </button>
-      <b-navbar-nav class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-      </b-navbar-nav>
       <b-navbar-nav class="navbar-nav-right ml-auto">
         <form class="mr-auto search-form d-none d-md-block" action="#">
           <div class="form-group">
             <input type="search" class="form-control" placeholder="Search Here">
           </div>
         </form>
-        <b-nav-item-dropdown right class="preview-list">
-          <template slot="button-content">
-            <div class="nav-link count-indicator">
-              <i class="mdi mdi-bell-outline"></i>
-              <span class="count">7</span>
-            </div>
-          </template>
-          <b-dropdown-item class="preview-item py-2 px-0 border-bottom">
-            <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
-            <span class="badge badge-pill badge-primary float-right">View all</span>
-          </b-dropdown-item>
-        </b-nav-item-dropdown>
+        <a class="text-small forgot-password text-black"  @click="$router.push('/mainpage/')">파이썬 배포 임시버튼</a>
         <div class="ml-3">
           <b-button variant="outline-dark" @click="$router.push('/login/')">로그인</b-button>
         </div>
       </b-navbar-nav>
-      <button class="navbar-toggler navbar-toggler-right align-self-center" type="button" @click="collapedMobileSidebar()">
-        <span class="mdi mdi-menu"></span>
-      </button>
     </div>
   </b-navbar>
 </template>
@@ -55,6 +39,11 @@ export default {
     },
     collapedMobileSidebar: function () {
       $('#sidebar').toggleClass('active')
+    },
+    onClickLogout () {
+      this.logout()
+      alert('Success Logout')
+      this.$router.push({ name: 'mainpage' })
     }
   }
 }

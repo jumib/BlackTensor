@@ -48,7 +48,7 @@
             <h4 class='card-title mb-0'>history</h4><br>
           </div>
           <div class='table-responsive'>
-            <detailhistory/>
+            <detailtable/>
           </div>
         </div>
       </div>
@@ -59,14 +59,14 @@
 <script lang="js">
 import detaillinechart from '../components/stockchart/detaillinechart'
 import detaillist from '../components/stocklist/detaillist'
-import detailhistory from '../components/stocktable/detailhistory'
+import detailtable from '../components/stocktable/detailtable'
 
 export default {
   name: 'basicTables',
   components: {
     detaillinechart,
     detaillist,
-    detailhistory
+    detailtable
   },
   data () {
     return {

@@ -16,9 +16,8 @@ export default {
       console.log('signup onSubmit()')
       this.signup(payload).then(res => {
         alert('success')
-        this.$router.push({ name: '/mainpage/' })
+        this.$router.push('/mainpage')
       }).catch(err => {
-        // alert(err.response.data.message)
         alert(err)
       })
     },

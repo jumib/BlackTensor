@@ -31,7 +31,13 @@
                 </div><br>
               </div>
               <br>
-              <b-button class="btn-block" variant="dark" @click="submit">가입 완료</b-button>
+              <div>
+                <b-button class="btn-block" variant="dark" @click="submit">가입 완료</b-button>
+              </div>
+              <br>
+              <div>
+                <a class="text-small forgot-password text-black" @click="$router.push('/mainpage/')">처음 화면으로 돌아가기</a>
+              </div>
             </form>
           </div>
         </div>
@@ -78,36 +84,29 @@ export default {
       return re.test(email)
     },
     emailDuplicate () {
+      console.log(this.email)
       axios.get(`http://localhost:8000/member/check/${this.email}`)
         .then(res => {
-          console.log(res)
-          if (res.status === 200) {
-            if (res.data === 'ok') {
-              alert('This Mail is not exist')
-            } else {
-              alert('This Mail is exist')
-            }
+          if (res.status === 200 && res.data === 'This mail is not exist') {
+            alert('시용할 수 있는 계정입니다')
+          } else {
+            alert('사용할 수 없는 계정입니다')
           }
+        }).catch(err => {
+          console.log(err)
+          alert('요청이 실패하였습니다')
         })
-        // .catch(err => {
-        //   console.log('Check Request Mail')
-        // })
     },
     apiIdDuplicate () {
-      axios.get(`http://localhost:8000/member/check/${this.apiId}`)
+      axios.get(`http://localhost:8000/member/find/${this.apiId}`)
         .then(res => {
           console.log(res)
-          if (res.status === 200) {
-            if (res.data === 'ok') {
-              alert('This apiId is not exist')
-            } else {
-              alert('This apiId is exist')
-            }
+          if (res.status === 200 && res.data === 'find Api Id Fail') {
+            alert('사용할 수 있는 아이디입니다')
+          } else {
+            alert('사용할 수 없는 아이디입니다')
           }
         })
-        // .catch(err => {
-        //   console.log('Check Request apiId')
-        // })
     }
   }
 }

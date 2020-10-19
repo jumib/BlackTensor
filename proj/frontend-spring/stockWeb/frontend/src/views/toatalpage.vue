@@ -57,7 +57,7 @@
           <totalbarchart class='mt-4' :height="130"></totalbarchart>
         </div>
         <div>
-          <totalhistory class='table-responsive'/>
+          <totaltable :totalhistorys="totalhistorys"/>
         </div>
       </div>
     </div>
@@ -66,16 +66,24 @@
 
 <script lang="js">
 import totalbarchart from '../components/stockchart/totalbarchart'
-import totalhistory from '../components/stocktable/totalhistory'
+import totaltable from '../components/stocktable/totaltable'
 import totallist from '../components/stocklist/totallist'
+import { mapState, mapActions } from 'vuex'
 
 export default {
-  name: 'basicTables',
+  name: 'totalpage',
   components: {
     totalbarchart,
-    totalhistory,
+    totaltable,
     totallist
+  },
+  computed: {
+    ...mapState(['totalhistorys'])
+  },
+  methods: {
+    ...mapActions(['fetchTotalTable'])
   }
+
 }
 </script>
 

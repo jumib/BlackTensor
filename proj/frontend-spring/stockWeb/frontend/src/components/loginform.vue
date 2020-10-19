@@ -11,7 +11,7 @@
                 <div class="form-group">
                   <label class="label">이메일</label>
                   <div class="input-group">
-                    <b-form-textarea type="text" v-model="email" class="form-control"/>
+                    <b-form-textarea type="text" v-model="id" class="form-control"/>
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -35,7 +35,7 @@
                       class="btn-block" variant="dark" @click="submit">로그인</b-button>
                 </div>
                 <div class="text-block text-center my-3">
-                  <a href="#" class="text-small forgot-password text-black">비밀번호 찾기</a>
+                  <a class="text-small forgot-password text-black" @click="$router.push('/findpassword/')">비밀번호 찾기</a>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-block">with Google</button>
@@ -44,6 +44,7 @@
                   <span class="text-small font-weight-semibold">아직 회원이 아니신가요?</span>
                   <b-button type="text" variant="outline-dark" class="ml-2" @click="$router.push('/register/')">회원가입</b-button>
                 </div>
+                <a class="text-small forgot-password text-black" @click="$router.push('/mainpage/')">처음 화면으로 돌아가기</a>
             </form>
             </b-card>
           </div>
@@ -59,15 +60,15 @@ export default {
   name: 'loginform',
   data () {
     return {
-      email: '',
+      id: '',
       password: ''
     }
   },
   methods: {
     submit () {
       console.log('LoginForm submit()')
-      const { email, password } = this
-      this.$emit('submit', { email, password })
+      const { id, password } = this
+      this.$emit('submit', { id, password })
     }
   }
 }

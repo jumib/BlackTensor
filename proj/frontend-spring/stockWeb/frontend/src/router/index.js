@@ -8,6 +8,7 @@ import detailpage from '../views/detailpage'
 import wishcart from '../views/wishcart'
 
 import login from '../views/login'
+import findpassword from '../views/findpassword'
 import register from '../views/register'
 import mainpage from '../views/mainpage'
 import mypage from '../views/mypage'
@@ -24,7 +25,7 @@ const router = new Router({
     component: mainView,
     children: [
       {
-        path: '/mainpage',
+        path: '/mainpage/',
         name: 'mainpage',
         component: mainpage
       },
@@ -45,12 +46,10 @@ const router = new Router({
       },
       {
         path: '/detailpage',
-        name: detailpage,
         component: detailpage
       },
       {
         path: '/mypage',
-        name: mypage,
         component: mypage
       }
     ]
@@ -71,6 +70,10 @@ const router = new Router({
       {
         path: '/register',
         component: register
+      },
+      {
+        path: '/findpassword',
+        component: findpassword
       }
     ]
   }

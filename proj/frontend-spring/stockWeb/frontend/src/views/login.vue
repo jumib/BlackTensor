@@ -15,12 +15,17 @@ export default {
     onSubmit (payload) {
       console.log('login onSubmit()')
       this.login(payload).then(res => {
-        alert('success')
-        this.$router.push({ name: '/mainpage/' })
-      }).catch(err => {
-        // alert(err.response.data.message)
-        alert('err: ', err)
+        if (res.status === 200) {
+        } if (res.data === 'Login OK') {
+          alert('success')
+        } else {
+          alert('아이디와 비밀번호가 올바르지 않습니다')
+        }
+        this.$router.push('/mainpage')
       })
+      // .catch(err => {
+      // alert('아이디와 비밀번호를 확인하세요')
+      // })
     },
     ...mapActions(['login'])
   }
