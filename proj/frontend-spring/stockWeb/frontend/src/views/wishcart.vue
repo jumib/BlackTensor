@@ -1,6 +1,4 @@
 <template>
-  <b-row>
-    <b-col cols="4">
       <div class='card'>
         <div class='card-body'>
           <b-tabs content-class="mt-3">
@@ -10,20 +8,20 @@
               </b-input-group><br>
             </b-tab>
             <b-tab title="찜 목록" active><p>내가 찜한 상품 리스트</p></b-tab>
+            <b-card-group>
+              <div class="grid-margin stretch-card">
+                <div>
+                  <b-card style="max-width: 23rem;">
+                    <b-card-title>삼성전자</b-card-title>
+                    <line-chart height="250"></line-chart>
+                    <b-table :items="items"></b-table>
+                  </b-card>
+                </div>
+              </div>
+            </b-card-group>
           </b-tabs>
         </div>
       </div>
-    </b-col>
-    <div class="col-md-8 grid-margin stretch-card">
-      <div>
-        <b-card style="max-width: 23rem;">
-          <b-card-title>삼성전자</b-card-title>
-          <line-chart height="250"></line-chart>
-          <b-table :items="items"></b-table>
-        </b-card>
-      </div>
-    </div>
-  </b-row>
 </template>
 
 <script lang="js">

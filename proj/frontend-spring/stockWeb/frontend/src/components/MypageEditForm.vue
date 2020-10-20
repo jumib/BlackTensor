@@ -34,7 +34,7 @@
           <textarea class="form-control" id="exampleTextarea1" rows="2"></textarea>
         </div>
         <button class="btn btn-success mr-2" @click="$router.push('/mypageEdit/')">완료</button>
-        <button class="btn mr-2" @click="$router.push('/mypage/')">취소</button>
+        <button class="btn mr-2" @click="$router.push('/mypage/')">돌아가기</button>
       </form>
     </div>
   </div>
