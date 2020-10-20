@@ -12,6 +12,8 @@ import findpassword from '../views/findpassword'
 import register from '../views/register'
 import mainpage from '../views/mainpage'
 import mypage from '../views/mypage'
+import mypageEdit from '../views/mypageEdit'
+
 
 Vue.use(Router)
 
@@ -51,6 +53,10 @@ const router = new Router({
       {
         path: '/mypage',
         component: mypage
+      },
+      {
+        path: '/mypageEdit',
+        component: mypageEdit
       }
     ]
   },

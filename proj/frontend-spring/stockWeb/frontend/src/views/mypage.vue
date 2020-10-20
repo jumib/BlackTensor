@@ -1,10 +1,10 @@
 <template>
-  <mypageform/>
+  <mypage-read-form/>
 </template>
 
 <script>
-import Mypageform from '../components/mypageform'
+import MypageReadForm from '../components/MypageReadForm'
 export default {
-  components: {Mypageform}
+  components: {MypageReadForm}
 }
 </script>
