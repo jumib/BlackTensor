@@ -5,6 +5,8 @@
 <script>
 import MypageReadForm from '../components/MypageReadForm'
 export default {
-  components: {MypageReadForm}
+  components: {
+    MypageReadForm
+  }
 }
 </script>

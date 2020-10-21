@@ -26,4 +26,5 @@ export default {
         commit(FETCH_TOTAL_TABLE, res.data)
       })
   }
+
 }

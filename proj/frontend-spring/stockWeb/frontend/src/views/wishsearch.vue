@@ -43,9 +43,11 @@ export default {
   },
   methods: {
     submit () {
-      this.viewflag = true
+      if (this.submit()) {
+        this.viewflag = true
+      } else {
 
-
+      }
     }
   }
 }
