@@ -3,7 +3,6 @@
     <div class="card-body">
       <h3>My Page</h3><br>
       <v-divider></v-divider><br>
-      <!-- 후에 readonly 해제하고 read 페이지로 대체해야 함 -->
       <form>
         <div class="form-group">
           <label for="exampleInputPassword4">키움아이디</label>
@@ -13,25 +12,25 @@
         <v-divider></v-divider><br>
         <div class="form-group">
           <label for="exampleInputName1">이름</label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="name" readonly>
+          <input type="text" class="form-control" v-model="memberinfo.name" id="exampleInputName1" readonly>
         </div>
         <div class="form-group">
           <b-form-group label="성별">
-            <b-form-radio v-model="selected" name="some-radios" value="Male" disabled>Male</b-form-radio>
-            <b-form-radio v-model="selected" name="some-radios" value="Female" disabled>Female</b-form-radio>
+            <b-form-radio  v-model="selected" name="some-radios" value="M"  disabled>Male</b-form-radio>
+            <b-form-radio v-model="selected" name="some-radios" value="F" disabled>Female</b-form-radio>
           </b-form-group>
         </div><br>
         <div class="form-group">
           <label for="exampleInputName1">생년월일</label>
-          <input type="text" class="form-control" id="Day of Birth" placeholder="예) 2000-01-01" readonly>
+          <input type="text" class="form-control"  v-model="memberinfo.birth" id="Day of Birth" readonly>
         </div>
         <div class="form-group">
           <label for="exampleInputName1">연락처</label>
-          <input type="text" class="form-control" id="phone number" placeholder="예) 000-0000-0000" readonly>
+          <input type="text" class="form-control"  v-model="memberinfo.phone" id="phone number" readonly>
         </div>
         <div class="form-group">
           <label for="exampleTextarea1">메모</label>
-          <textarea class="form-control" id="exampleTextarea1" rows="2" readonly></textarea>
+          <textarea class="form-control" v-model="memberinfo.memo" id="exampleTextarea1" rows="2" readonly></textarea>
         </div>
         <button class="btn btn-success mr-2" @click="$router.push('/mypageEdit/')">수정하기</button>
       </form>
@@ -40,12 +39,16 @@
 </template>
 
 <script>
-// 후에 readonly 해제하고 read 페이지로 대체해야 함
 
 export default {
   data () {
     return {
       selected: ''
+    }
+  },
+  props: {
+    memberinfo: {
+      type: Array
     }
   }
 }

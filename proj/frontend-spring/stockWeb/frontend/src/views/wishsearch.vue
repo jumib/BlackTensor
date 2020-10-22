@@ -43,13 +43,12 @@ export default {
   },
   methods: {
     submit () {
-      if (this.submit()) {
+      // if (this.submit()) {
         this.viewflag = true
-      } else {
+      // } else {
 
       }
     }
-  }
 }
 </script>
 

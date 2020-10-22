@@ -1,4 +1,5 @@
 export default {
   totalhistorys: [],
-  totalhistory: null
+  totalhistory: null,
+  memberinfo: []
 }

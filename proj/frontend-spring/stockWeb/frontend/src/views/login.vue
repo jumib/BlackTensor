@@ -1,10 +1,10 @@
 <template>
   <loginform @submit="onSubmit"/>
-</template>
-
+</template>enfpdl
 <script>
 import loginform from '@/components/loginform.vue'
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
+import axios from 'axios'
 
 export default {
   name: 'login',
@@ -18,6 +18,7 @@ export default {
         if (res.status === 200) {
         } if (res.data === 'Login OK') {
           alert('success')
+          this.getMypage(payload)
         } else {
           alert('아이디와 비밀번호가 올바르지 않습니다')
         }
@@ -27,7 +28,7 @@ export default {
       // alert('아이디와 비밀번호를 확인하세요')
       // })
     },
-    ...mapActions(['login'])
+    ...mapActions(['login', 'getMypage'])
   }
 }
 </script>
