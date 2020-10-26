@@ -5,10 +5,11 @@
       <v-divider></v-divider><br>
       <form>
         <div class="form-group">
-          <label for="exampleInputPassword4">키움아이디</label>
-          <input type="password" class="form-control" id="exampleInputPassword4" placeholder="API Id" v-model="apiId">
+          <label>키움아이디</label>
+          <input type="text" class="form-control" id="exampleInputName" placeholder="변경 할 키움 아이디를 작성하세요" v-model="apiId">
         </div>
-        <button class="btn btn-success mr-2">변경하기</button><br><br>
+        <button class="btn btn-secondary mr-2" @click="apiIdDuplicate">중복검사</button>
+        <button class="btn btn-success mr-2" @click="changeApiId">변경완료</button><br><br>
         <v-divider></v-divider><br>
         <div class="form-group">
           <label for="exampleInputName1">이름</label>
@@ -21,8 +22,7 @@
           </b-form-group>
         </div><br>
         <div class="form-group">
-          <label for="exampleInputName1">생년월일</label>
-          <input type="text" class="form-control" id="Day of Birth" placeholder="예) 2000-01-01" v-model="birth">
+          <label>생년월일</label>
         </div>
         <div class="form-group">
           <label for="exampleInputName1">연락처</label>
@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { mapState } from 'vuex'
 
 export default {
   data () {
@@ -49,13 +51,39 @@ export default {
       apiId: '',
       birth: '',
       phone: '',
-      memo: ''
+      memo: '',
+      year: ''
     }
   },
   methods: {
     onSubmit () {
-       const { gender, name, birth, phone, memo } = this
+      const { gender, name, birth, phone, memo } = this
       this.$emit('submit', { gender, name, birth, phone, memo })
+    },
+    changeApiId () {
+      console.log('change apiId payload: ')
+      axios.put(`http://localhost:8000/member/changeAppId`, {
+      })
+
+    },
+    apiIdDuplicate () {
+      axios.get(`http://localhost:8000/member/find/${this.apiId}`)
+          .then(res => {
+            console.log(res)
+            if (res.status === 200 && res.data === 'find Api Id Fail') {
+              alert('사용할 수 있는 아이디입니다')
+            } else {
+              alert('사용할 수 없는 아이디입니다')
+            }
+          })
+    }
+  },
+  computed: {
+    ...mapState(['memberinfo'])
+  },
+  props: {
+    memberinfo: {
+      type: Array
     }
   }
 }

@@ -5,8 +5,8 @@
       <v-divider></v-divider><br>
       <form>
         <div class="form-group">
-          <label for="exampleInputPassword4">키움아이디</label>
-          <input type="password" class="form-control" id="exampleInputPassword4" placeholder="API Id" readonly>
+          <label for="exampleInput">키움아이디</label>
+          <input type="text" class="form-control" v-model="myApiId" id="exampleInput" readonly>
         </div>
         <button class="btn btn-success mr-2" @click="$router.push('/mypageEdit/')">변경하기</button><br><br>
         <v-divider></v-divider><br>
@@ -16,8 +16,7 @@
         </div>
         <div class="form-group">
           <b-form-group label="성별">
-            <b-form-radio  v-model="selected" name="some-radios" value="M"  disabled>Male</b-form-radio>
-            <b-form-radio v-model="selected" name="some-radios" value="F" disabled>Female</b-form-radio>
+            <b-form-radio-group name="some-radios" v-model="selected" :options="options" disabled></b-form-radio-group>
           </b-form-group>
         </div><br>
         <div class="form-group">
@@ -43,12 +42,20 @@
 export default {
   data () {
     return {
-      selected: ''
+      selected: this.memberinfo.gender,
+      options: [
+        { text: 'Male', value: 'M' },
+        { text: 'Female', value: 'F' }
+      ]
     }
   },
   props: {
     memberinfo: {
       type: Array
+    },
+    myApiId: {
+      type: Object,
+      required: true
     }
   }
 }

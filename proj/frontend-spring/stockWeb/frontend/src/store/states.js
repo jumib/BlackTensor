@@ -1,5 +1,6 @@
 export default {
   totalhistorys: [],
   totalhistory: null,
-  memberinfo: []
+  memberinfo: [],
+  myApiId: ''
 }

@@ -11,7 +11,7 @@
                 <div class="form-group">
                   <label class="label">이메일</label>
                   <div class="input-group">
-                    <b-form-textarea type="text" v-model="id" class="form-control"/>
+                    <input type="text" v-model="id" class="form-control"/>
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -22,7 +22,7 @@
                 <div class="form-group">
                   <label class="label">비밀번호</label>
                   <div class="input-group">
-                    <b-form-textarea type="password" v-model="password" class="form-control"/>
+                    <input type="password" v-model="password" class="form-control"/>
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
