@@ -4,7 +4,6 @@
 
 <script>
 import MypageEditForm from '../components/MypageEditForm'
-import axios from 'axios'
 
 export default {
   components: {
@@ -12,8 +11,6 @@ export default {
   },
   methods: {
     onSubmit (payload) {
-      const { gender, name, birth, phone, memo } = payload
-      axios.put(`http://localhost:8000/member/mypage/`)
     }
   }
 }

@@ -28,11 +28,11 @@
 <script lang="js">
 import wishbarchart from '../components/stockchart/wishbarchart'
 import wishsearchtable from '../components/stocktable/wishsearchtable'
+import { mapActions } from 'vuex'
 
 export default {
   data () {
     return {
-      status: [],
       stockName: '',
       viewflag: false
     }
@@ -42,13 +42,18 @@ export default {
     wishsearchtable
   },
   methods: {
-    submit () {
-      // if (this.submit()) {
-        this.viewflag = true
-      // } else {
-
-      }
-    }
+    submit (stockName) {
+      this.getStockData(stockName)
+      this.getInfoData(stockName)
+      this.getAllData(stockName)
+      this.viewflag = true
+    },
+    ...mapActions([
+      'getStockData',
+      'getInfoData',
+      'getAllData'
+    ])
+  }
 }
 </script>
 

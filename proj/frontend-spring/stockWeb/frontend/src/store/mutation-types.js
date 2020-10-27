@@ -1,3 +1,6 @@
 export const FETCH_TOTAL_TABLE = 'FETCH_TOTAL_TABLE'
 export const GET_MYPAGE = 'GET_MYPAGE'
-export const GET_APIID = 'GET_APIID'
+export const GET_LOGINFO = 'GET_LOGINFO'
+export const GET_STOCKDATA = 'GET_STOCKDATA'
+export const GET_INFODATA = 'GET_INFODATA'
+export const GET_ALLDATA = 'GET_ALLDATA'

@@ -33,15 +33,7 @@
                 </div>
               </div>
             </div>
-            <div class="ml-lg-auto" id="sales-statistics-legend">
-              <div class="chartjs-legend">
-                <ul>
-                  <li><span style="background-color: #8862e0"></span>Revenue</li>
-                  <li><span style="background-color: #19d895"></span>Sales</li>
-                </ul>
-              </div>
-            </div>
-          </div><br>
+          </div>
           <detaillinechart class='mt-5' :height="170"></detaillinechart><br>
           <div class='d-flex justify-content-between'>
             <h4 class='card-title mb-0'>history</h4><br>

@@ -11,7 +11,7 @@
                 <div class="form-group">
                   <label class="label">이메일</label>
                   <div class="input-group">
-                    <input type="text" v-model="id" class="form-control"/>
+                    <input type="text" v-model="email" class="form-control"/>
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -60,15 +60,15 @@ export default {
   name: 'loginform',
   data () {
     return {
-      id: '',
+      email: '',
       password: ''
     }
   },
   methods: {
     submit () {
       console.log('LoginForm submit()')
-      const { id, password } = this
-      this.$emit('submit', { id, password })
+      const { email, password } = this
+      this.$emit('submit', { email, password })
     }
   }
 }

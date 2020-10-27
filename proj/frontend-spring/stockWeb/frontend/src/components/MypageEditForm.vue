@@ -62,27 +62,26 @@ export default {
     },
     changeApiId () {
       console.log('change apiId payload: ')
-      axios.put(`http://localhost:8000/member/changeAppId`, {
+      axios.put(`http://localhost:8000/member/change/apiid`, {
       })
-
     },
     apiIdDuplicate () {
-      axios.get(`http://localhost:8000/member/find/${this.apiId}`)
-          .then(res => {
-            console.log(res)
-            if (res.status === 200 && res.data === 'find Api Id Fail') {
-              alert('사용할 수 있는 아이디입니다')
-            } else {
-              alert('사용할 수 없는 아이디입니다')
-            }
-          })
+      axios.get(`http://localhost:8000/member/check/apiid/${this.apiId}`)
+        .then(res => {
+          console.log(res)
+          if (res.status === 200 && res.data === 'find Api Id Fail') {
+            alert('사용할 수 있는 아이디입니다')
+          } else {
+            alert('사용할 수 없는 아이디입니다')
+          }
+        })
     }
   },
   computed: {
-    ...mapState(['memberinfo'])
+    ...mapState(['mypageinfo'])
   },
   props: {
-    memberinfo: {
+    mypageinfo: {
       type: Array
     }
   }

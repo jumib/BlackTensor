@@ -92,13 +92,12 @@ export default {
           } else {
             alert('사용할 수 없는 계정입니다')
           }
-        }).catch(err => {
-          console.log(err)
+        }).catch(
           alert('요청이 실패하였습니다')
-        })
+        )
     },
     apiIdDuplicate () {
-      axios.get(`http://localhost:8000/member/find/${this.apiId}`)
+      axios.get(`http://localhost:8000/member/check/apiid/${this.apiId}`)
         .then(res => {
           console.log(res)
           if (res.status === 200 && res.data === 'find Api Id Fail') {

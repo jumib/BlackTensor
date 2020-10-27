@@ -14,12 +14,17 @@ export default {
   methods: {
     onSubmit (payload) {
       console.log('signup onSubmit()')
-      this.signup(payload).then(res => {
-        alert('success')
-        this.$router.push('/mainpage')
-      }).catch(err => {
-        alert(err)
-      })
+      this.signup(payload)
+        .then(res => {
+          if (res.status === 200 && res.data != null) {
+            alert('success')
+            this.$router.push('/mainpage')
+          } else {
+            alert('SignUp Fail')
+          }
+        }).catch(err => {
+          alert(err)
+        })
     },
     ...mapActions(['signup'])
   }

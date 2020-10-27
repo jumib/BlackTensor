@@ -1,5 +1,5 @@
 <template>
-  <mypage-read-form :memberinfo="memberinfo" :myApiId="myApiId"/>
+  <mypage-read-form :mypageinfo="mypageinfo" :loginfo="loginfo"/>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
     MypageReadForm
   },
   computed: {
-    ...mapState(['memberinfo', 'myApiId'])
+    ...mapState(['mypageinfo', 'loginfo'])
   }
 }
 </script>

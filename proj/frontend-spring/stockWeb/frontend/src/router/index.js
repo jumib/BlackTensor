@@ -14,7 +14,6 @@ import mainpage from '../views/mainpage'
 import mypage from '../views/mypage'
 import mypageEdit from '../views/mypageEdit'
 
-
 Vue.use(Router)
 
 const router = new Router({
